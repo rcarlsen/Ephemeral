@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHF-jX-oum">
+                                <rect key="frame" x="201" y="200" width="200" height="200"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.041046944598614132" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ffm-fQ-GhF"/>
+                                    <constraint firstAttribute="width" constant="200" id="z0T-xH-Jcu"/>
+                                </constraints>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ephemeral Video" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79K-en-QnR">
+                                <rect key="frame" x="207" y="28" width="187.5" height="29"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-RS-CVa" userLabel="Intro View">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgB-gU-edr" userLabel="Instructions">
+                                        <rect key="frame" x="30" y="26" width="240" height="249"/>
+                                        <animations/>
+                                        <string key="text">Tap and hold the record button to capture a short video. Hold the button until complete or release early to cancel the recording.</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="0.90492021276595747" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="0x7-MC-yAh"/>
+                                    <constraint firstItem="MgB-gU-edr" firstAttribute="top" secondItem="t6H-RS-CVa" secondAttribute="top" constant="26" id="BkT-5r-hg0"/>
+                                    <constraint firstAttribute="height" constant="300" id="TNn-Gg-7jE"/>
+                                    <constraint firstItem="MgB-gU-edr" firstAttribute="leading" secondItem="t6H-RS-CVa" secondAttribute="leading" constant="30" id="a4j-n3-nAT"/>
+                                    <constraint firstAttribute="bottom" secondItem="MgB-gU-edr" secondAttribute="bottom" constant="25" id="am4-uF-AoH"/>
+                                    <constraint firstAttribute="trailing" secondItem="MgB-gU-edr" secondAttribute="trailing" constant="30" id="hdb-bt-vRm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iQ-rU-MML" userLabel="Sharing View">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharing Video" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2m-MZ-6cn">
+                                        <rect key="frame" x="95" y="8" width="110" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="v6n-Lt-RdS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="xMv-ox-V4S" userLabel="Gray Activity Indicator">
+                                        <rect key="frame" x="132" y="131" width="37" height="37"/>
+                                        <animations/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfG-pj-OmG">
+                                        <rect key="frame" x="126" y="262" width="48" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.90395057624113473" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="t2m-MZ-6cn" firstAttribute="top" secondItem="9iQ-rU-MML" secondAttribute="topMargin" id="742-dh-gQp"/>
+                                    <constraint firstAttribute="centerX" secondItem="AfG-pj-OmG" secondAttribute="centerX" id="BYn-Ps-G8A"/>
+                                    <constraint firstAttribute="centerY" secondItem="xMv-ox-V4S" secondAttribute="centerY" constant="0.5" id="Js3-Kx-SZK"/>
+                                    <constraint firstAttribute="centerX" secondItem="xMv-ox-V4S" secondAttribute="centerX" constant="-0.5" id="Sgw-SS-tBT"/>
+                                    <constraint firstAttribute="width" constant="300" id="Uhi-EU-6b8"/>
+                                    <constraint firstAttribute="bottom" secondItem="AfG-pj-OmG" secondAttribute="bottom" constant="8" id="fae-uZ-dub"/>
+                                    <constraint firstAttribute="height" constant="300" id="ibU-6P-g2k"/>
+                                    <constraint firstItem="t2m-MZ-6cn" firstAttribute="centerX" secondItem="xMv-ox-V4S" secondAttribute="centerX" id="qI4-Ap-EhB"/>
+                                </constraints>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aLZ-W0-9IL">
+                                <rect key="frame" x="17" y="168" width="568" height="2"/>
+                                <animations/>
+                            </progressView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aLZ-W0-9IL" firstAttribute="top" secondItem="wHF-jX-oum" secondAttribute="bottom" constant="-232" id="0Cy-kT-aZp"/>
+                            <constraint firstAttribute="centerY" secondItem="9iQ-rU-MML" secondAttribute="centerY" id="KIp-YT-sg0"/>
+                            <constraint firstAttribute="centerX" secondItem="79K-en-QnR" secondAttribute="centerX" constant="-0.5" id="UJn-dz-rp7"/>
+                            <constraint firstAttribute="centerY" secondItem="wHF-jX-oum" secondAttribute="centerY" id="Ypo-Rg-6Hh"/>
+                            <constraint firstAttribute="centerX" secondItem="t6H-RS-CVa" secondAttribute="centerX" id="atp-2U-tkh"/>
+                            <constraint firstAttribute="centerX" secondItem="wHF-jX-oum" secondAttribute="centerX" constant="-1" id="iCU-0h-vEM"/>
+                            <constraint firstAttribute="centerX" secondItem="9iQ-rU-MML" secondAttribute="centerX" id="kDB-r9-q0f"/>
+                            <constraint firstItem="aLZ-W0-9IL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="1" id="kOp-2X-RAA"/>
+                            <constraint firstAttribute="centerY" secondItem="t6H-RS-CVa" secondAttribute="centerY" id="tkb-2A-Ye1"/>
+                            <constraint firstItem="aLZ-W0-9IL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="uPP-ch-ubD"/>
+                            <constraint firstItem="79K-en-QnR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="wug-2n-J9D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelShareButton" destination="AfG-pj-OmG" id="oqh-ca-aQh"/>
+                        <outlet property="instructionsView" destination="t6H-RS-CVa" id="mrX-e3-mmL"/>
+                        <outlet property="progressView" destination="aLZ-W0-9IL" id="4fo-3m-yRX"/>
+                        <outlet property="recordButton" destination="wHF-jX-oum" id="Yyt-vB-qng"/>
+                        <outlet property="shareProgressView" destination="9iQ-rU-MML" id="UVe-bY-aCN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="399"/>
+        </scene>
+    </scenes>
+</document>
